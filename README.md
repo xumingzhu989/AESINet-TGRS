@@ -5,11 +5,11 @@ This is a repository for the paper "Adaptive Edge-aware Semantic Interaction Net
 
 AESINet-V： 
 https://pan.baidu.com/s/1Xo97lQF4TS2jak9v8iU8jA?pwd=qegm 
-Extracted code：qegm
+
 
 AESINet-R：
 https://pan.baidu.com/s/1gYW9qOjR0YjU5R4dCN9Hfg?pwd=tj25 
-Extracted code：tj25
+
 
 ### Note
 Currently, both ResNet and VGG versions of AESINet codes have been uploaded.

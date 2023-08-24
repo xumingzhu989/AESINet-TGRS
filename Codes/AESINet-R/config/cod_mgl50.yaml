@@ -1,0 +1,72 @@
+DATA:
+  data_root: /root/ZengXiangyu/AESINetData
+
+  train_list: /root/ZengXiangyu/AESINetData/ORSSDtrain_list.txt
+
+#  train_list: /root/ZengXiangyu/AESINetData/ORSSD4800train_list.txt
+#  train_list: /root/ZengXiangyu/AESINetData/EORSSD11200train_list.txt
+#  train_list: /root/ZengXiangyu/AESINetData/ORSI16000train_list.txt
+
+
+TRAIN:
+
+  LR: 0.0001
+  split: train  # split in [train, val and test]
+  # 块大小必须整除宽和高
+  block_num: 8  # 长和宽方向上的分割数
+  block_nod: 1 # 每个图块的节点数
+  img_h: 224 #224 #256 #320
+  img_w: 224 #224 #256 #320
+  knn: 32
+  img_dim: 32 # 图像维度
+  cov_loop: 3 # 卷积总层数
+  cov_bias: True # 单层卷积是否加偏置
+
+  train_batch_size: 10
+  val_batch_size: 1  # batch size for validation during training, memory and speed tradeoff
+  epoch_num: 10
+
+  scale_min: 0.5  # minimum random scale
+  scale_max: 2.0  # maximum random scale
+  rotate_min: -90 #-10  # minimum random rotate
+  rotate_max: 90 #10  # maximum random rotate
+  ignore_label: 0 # 255
+  zoom_factor: 8  # zoom factor for final prediction during training, be in [1, 2, 4, 8]
+
+  workers: 4  # data loader workers
+
+  model_path: ./modelPTH/
+
+
+
+
+
+
+TEST:
+
+#  test_list: /root/ZengXiangyu/AESINetData/ORSSDtest_list.txt
+  test_list: /root/ZengXiangyu/AESINetData/EORSSDtest_list.txt
+#  test_list: /root/ZengXiangyu/AESINetData/ORSItest_list.txt
+
+#  results_folder: ./results/ORSSD-TE/  # results save folder
+  results_folder: ./results/EORSSD-TE/  # results save folder
+#  results_folder: ./results/ORSI-TE/  # results save folder
+
+  split: test  # split in [train, val and test]
+  base_size: 224  # based size for scaling 
+  test_h: 224
+  test_w: 224
+  scales: [1.0]  # evaluation scales, ms as [0.5, 0.75, 1.0, 1.25, 1.5, 1.75]
+  test_batch_size: 1
+  has_prediction: False  # has prediction already or not
+  index_start: 0  # evaluation start index in list
+  index_step: 0  # evaluation step index in list, 0 means to end
+  gpu: [3]
+#  model_path:  model_file/mgl_r.pth
+
+
+
+
+
+
+

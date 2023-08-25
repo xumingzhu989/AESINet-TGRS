@@ -19,7 +19,10 @@ Change the dataset path in the code to the path of the dataset listing file (.tx
 
 ### Note
 Currently, both ResNet and VGG versions of AESINet codes have been uploaded.
+
 There is still room for improvement in the readability of the code, and the author will update the version with better readability as soon as possible.
+
+If you have any questions, please send an email to: z15264367990@163.com
 
 
 

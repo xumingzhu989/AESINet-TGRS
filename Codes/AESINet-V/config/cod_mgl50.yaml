@@ -1,0 +1,46 @@
+DATA:
+  data_root: /root/ILearnWork/ilData
+  train_list: /root/ILearnWork/ilData/ORSSD4800train_list.txt
+  test_list: /root/ILearnWork/ilData/EORSSDtest_list.txt
+
+
+
+TRAIN:
+  split: train  
+  train_batch_size: 8
+  epoch_num: 60
+
+
+  img_h: 224 
+  img_w: 224 
+  img_dim: 32 
+  block_num: 8  
+  block_nod: 1 
+  knn: 32
+  cov_loop: 3 
+  cov_bias: True 
+  val_batch_size: 1
+  scale_min: 0.5  
+  scale_max: 2.0  
+  rotate_min: -90 
+  rotate_max: 90 
+  ignore_label: 0 
+  zoom_factor: 8  
+  workers: 4 
+  model_path: ./modelPTH/
+
+
+TEST:
+  split: test
+  test_batch_size: 4
+
+  base_size: 224
+  test_h: 224
+  test_w: 224
+  scales: [1.0]  
+  has_prediction: False  
+  index_start: 0  
+  index_step: 0  
+  gpu: [3]
+  results_folder: ./results/EORSSD-TE/  # results save folder
+

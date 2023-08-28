@@ -1,6 +1,19 @@
 # AESINet-TGRS
 This is a repository for the paper "Adaptive Edge-aware Semantic Interaction Network for Salient Object Detection in Optical Remote Sensing Images", accepted by IEEE TGRS 2023.
 
+Please use the information below to cite our work, thank you.
+
+@ARTICLE{10198281,
+  author={Zeng, Xiangyu and Xu, Mingzhu and Hu, Yijun and Tang, Haoyu and Hu, Yupeng and Nie, Liqiang},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={Adaptive Edge-Aware Semantic Interaction Network for Salient Object Detection in Optical Remote Sensing Images}, 
+  year={2023},
+  volume={61},
+  number={},
+  pages={1-16},
+  doi={10.1109/TGRS.2023.3300317}}
+
+
 ### Model.pth
 
 AESINet-V： 
